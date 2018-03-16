@@ -7,10 +7,10 @@ Dark green: #28b485
 
 */
 
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
@@ -24,6 +24,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -35,17 +36,17 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -58,10 +59,11 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+  text-align: center;
 }
 
-.heading-primary-main {
-  display: block;
+.heading-primary--main {
+  display: inlineblock;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
@@ -69,11 +71,12 @@ body {
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: ease-out;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
   /* animation-iteration-count: 3; */
   /* animation-delay: 0.5s; */
 }
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -154,7 +157,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -181,7 +184,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 1s ease-out;
   animation-delay: .75s;
   animation-fill-mode: backwards;
