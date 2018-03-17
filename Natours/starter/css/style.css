@@ -14,10 +14,9 @@
     transform: skewY(7deg); }
 
 .section-tours {
-  background-color: #f7f7f7;
   margin-top: -10vh;
   padding: 20rem 0;
-  padding-bottom: 50rem; }
+  position: relative; }
 
 *, *::after, *::before {
   margin: 0;
@@ -168,6 +167,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: white; }
+
+.btn--green {
+  background-color: #7ed56f;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #7ed56f; }
 
 .btn::after {
   content: "";
@@ -342,6 +347,20 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.20;
+  margin-top: -5vh; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: fill; }
 
 .header {
   height: 95vh;
